@@ -11,17 +11,24 @@
     table {
       width: 500px;
       border-collapse: collapse;
+      position: relative;
     }
     td, th {
       border: 1px solid black;
       padding: 10px;
     }
 
+    thead > tr > th {
+      position: static;
+      top: -1px;
+      background-color: rgba(34, 33, 33, 0.979);
+    }
+
     caption {
       font-size: 1.5em;
       font-weight: bold;
       padding: 10px;
-      background-color: rgba(128, 128, 128, 0.966);
+      background-color: rgba(128, 128, 128, 0.74);
 
     }
 
@@ -30,8 +37,12 @@
       color: white;
 }
 
+    tbody tr:nth-child(2n) {
+      background-color: lightgray;
+    }
+
     td.num {
-      text-align:right ;
+      text-align:center ;
     }
   </style>
 </head>
@@ -56,7 +67,20 @@
           <td>Rio de Janeiro</td>
           <td class="num">17.264.943</td>
         </tr>
-      </tbody>
+        <tr>
+          <td>Bahia</td>
+          <td class="num">14.873.064</td>
+        </tr>
+
+        <tr>
+          <td>Paraná</td>
+          <td class="num">11.433.95</td>
+        </tr>
+
+        <tr>
+          <td>Rio Grande do Sul</td>
+          <td class="num"> 9.557.071</td>
+        </tr>
       <tfoot>
         <tr>
           <th>Total de habitantes</th>
